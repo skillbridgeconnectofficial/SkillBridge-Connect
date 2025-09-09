@@ -14,7 +14,7 @@ app.use(express.static(__dirname));
 app.use(express.json());
 const allowedOrigins = [
     'https://skillbridge-connect-1.onrender.com/', // Your live frontend URL
-    'http://localhost:5000' // Keep this for local testing
+    'https://skillbridge-connect.onrender.com' // Keep this for local testing
 ];
 
 const corsOptions = {
@@ -91,6 +91,7 @@ app.post("/logout", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
 
 
 
