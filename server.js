@@ -12,10 +12,16 @@ dotenv.config();
 
 app.use(express.static(__dirname));
 app.use(express.json());
-const allowedOrigins = ['http://localhost:5000']; // Your frontend origin
+const allowedOrigins = [
+    'https://skillbridge-connect.onrender.com', // Your live frontend URL
+    'http://localhost:5000' // Keep this for local testing
+];
+
 const corsOptions = {
     origin: allowedOrigins,
-    credentials: true // This is essential for sending cookies
+    credentials: true
+};
+
 };
 app.use(cors(corsOptions));
 app.use(cookieParser());
@@ -86,4 +92,5 @@ app.post("/logout", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
 
