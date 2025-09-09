@@ -22,10 +22,9 @@ const corsOptions = {
     credentials: true
 };
 
-};
 app.use(cors(corsOptions));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '..', 'server'));
+app.use(express.static(path.join(__dirname, '..', 'server')));
 
 const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
@@ -92,6 +91,7 @@ app.post("/logout", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
 
 
 
