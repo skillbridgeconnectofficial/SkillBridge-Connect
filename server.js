@@ -10,6 +10,7 @@ const path = require("path");
 const app = express();
 dotenv.config();
 
+app.use(express.static(__dirname));
 app.use(express.json());
 const allowedOrigins = ['http://localhost:5000']; // Your frontend origin
 const corsOptions = {
@@ -38,7 +39,7 @@ const User = mongoose.model("creds", userSchema);
 
 app.get('/', (req, res) => {
     console.log("Root URL ('/') accessed. Redirecting to login page...");
-    res.redirect('/index.html');
+    res.sendfile(path.join(__dirname,"index.html"));
 });
 
 app.post("/signup" , async (req,res) => {
@@ -85,3 +86,4 @@ app.post("/logout", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
