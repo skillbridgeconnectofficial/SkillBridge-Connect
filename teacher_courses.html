@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Connect - Course Management</title>
+  <link rel="stylesheet" href="teacher_courses_style.css">
+</head>
+<body>
+
+  <!-- 3D Grid Background -->
+  <div class="background-grid"></div>
+  
+  <!-- Sidebar Placeholder -->
+  <aside class="sidebar">
+      <ul class="sidebar-nav">
+        <a href="index.html"> <li data-tooltip="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </li></a>
+        <a href="teacher_courses.html"><li data-tooltip="My Courses">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+        </li></a>
+        <a href="teacher_qna.html"><li data-tooltip="Student Q&A" class="notification">
+          <span class="notification-badge">3</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </li></a>
+        <a href="analytics.html"><li data-tooltip="Analytics">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+        </li></a>
+      </ul>
+    </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <header class="page-header">
+      <div class="header-text">
+        <h1>Course Management</h1>
+        <p>Your central hub for creating, managing, and tracking your courses.</p>
+      </div>
+      <button class="btn btn-primary upload-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+        Upload New Course
+      </button>
+    </header>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="tab-link active" onclick="openTab(event, 'OnGoing')">On-Going Courses (2)</button>
+      <button class="tab-link" onclick="openTab(event, 'Archived')">Archived Courses (1)</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="OnGoing" class="tab-content active">
+      <div class="course-grid">
+        <!-- On-Going Course Card 1 -->
+        <div class="course-card">
+          <h4>Advanced JavaScript</h4>
+          <div class="course-stats">
+            <span>215 Students</span>
+          </div>
+          <div class="assignment-status notification">
+            <span>5 New Assignments to Grade</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary">Manage Assignments</button>
+            <button class="btn btn-secondary">View Analytics</button>
+            <button class="btn btn-tertiary">Edit Course</button>
+          </div>
+        </div>
+        <!-- On-Going Course Card 2 -->
+        <div class="course-card">
+          <h4>UI/UX with Figma</h4>
+          <div class="course-stats">
+            <span>350 Students</span>
+          </div>
+          <div class="assignment-status">
+            <span>All assignments graded</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary">Manage Assignments</button>
+            <button class="btn btn-secondary">View Analytics</button>
+            <button class="btn btn-tertiary">Edit Course</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Archived" class="tab-content">
+      <div class="course-grid">
+        <!-- Archived Course Card 1 -->
+        <div class="course-card archived">
+          <h4>Introduction to Python</h4>
+          <div class="course-stats">
+            <span>480 Students (Completed)</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-secondary">View Final Report</button>
+            <button class="btn btn-tertiary">Unarchive</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="teacher_courses.js"></script>
+
+</body>
+</html>

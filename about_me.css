@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  --background-color: #000000;
+  --grid-color: rgba(52, 152, 219, 0.15);
+  --card-bg: rgba(23, 43, 77, 0.7);
+  --panel-bg: rgba(10, 25, 47, 0.8);
+  --primary-accent: #3498db;
+  --text-color: #ecf0f1;
+  --text-secondary: #bdc3c7;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+/* Base Layout & Background */
+.background-grid {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -1;
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.main-content { padding-top: 80px; /* Space for fixed header */ }
+
+/* Header (Copy from homepage style for consistency) */
+.main-header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 50px;
+  background: rgba(10, 25, 47, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+/* ... (include .header-left, .logo, .main-nav, and .auth-buttons styles from previous response) ... */
+.header-left { display: flex; align-items: center; gap: 50px; }
+.logo { font-size: 1.5rem; font-weight: 700; }
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 30px; }
+.main-nav a { text-decoration: none; color: var(--text-secondary); font-weight: 500; transition: color 0.3s; }
+.main-nav a:hover, .main-nav a.active { color: var(--primary-accent); }
+.auth-buttons { display: flex; gap: 15px; }
+.btn { padding: 10px 20px; border-radius: 8px; border: none; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.btn-primary { background-color: var(--primary-accent); color: white; }
+.btn-secondary { background: transparent; border: 1px solid var(--primary-accent); color: var(--primary-accent); }
+.auth-buttons .btn { padding: 8px 18px; border-radius: 50px; }
+
+
+/* About Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+}
+.hero-content h1 { font-size: 3.5rem; margin: 0 0 15px 0; color: var(--primary-accent); }
+.hero-content p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: var(--text-secondary); }
+
+/* General Content Section Styling */
+.content-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+.content-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+/* Our Story Section */
+.story-section {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+.story-image {
+  height: 400px;
+  background-image: linear-gradient(45deg, rgba(52, 152, 219, 0.5), rgba(10, 25, 47, 0.8));
+  border-radius: 20px;
+}
+.story-text p { line-height: 1.8; color: var(--text-secondary); }
+
+/* Core Values Section */
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.value-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.value-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+.value-card h3 { color: var(--primary-accent); margin-top: 0; }
+
+/* Meet the Team Section */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px; }
+.team-member-card { text-align: center; }
+.team-member-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-accent);
+  margin-bottom: 15px;
+}
+.team-member-card h4 { margin: 0; font-size: 1.2rem; }
+.team-member-card span { color: var(--text-secondary); }
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background: var(--panel-bg);
+  padding: 80px 20px;
+  margin-top: 50px;
+}
+.cta-section h2 { font-size: 2.2rem; }
+.cta-section p { color: var(--text-secondary); margin-bottom: 30px; }
+.btn-large { padding: 15px 30px; font-size: 1.1rem; }
+
+/* Footer (Copy from homepage style) */
+.main-footer {
+  padding: 30px 50px;
+  background: var(--panel-bg);
+  border-top: 1px solid rgba(52, 152, 219, 0.1);
+  /* ... rest of footer styles */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .story-section, .values-grid { grid-template-columns: 1fr; }
+}

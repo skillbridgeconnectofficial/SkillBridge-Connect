@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Connect - Teacher Dashboard</title>
+  <link rel="stylesheet" href="teacher_dashboard.css">
+</head>
+<body>
+
+  <!-- 3D Grid Background -->
+  <div class="background-grid"></div>
+
+  <!-- Left Sidebar -->
+  <aside class="sidebar">
+    <ul class="sidebar-nav">
+      <a href="index.html"> <li data-tooltip="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </li></a>
+      <a href="teacher_courses.html"><li data-tooltip="My Courses">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+      </li></a>
+      <a href="teacher_qna.html"><li data-tooltip="Student Q&A" class="notification">
+        <span class="notification-badge">3</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      </li></a>
+      <a href="analytics.html"><li data-tooltip="Analytics">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+      </li></a>
+    </ul>
+  </aside>
+
+  <!-- Main Dashboard Content -->
+  <main class="dashboard-content">
+    
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="greeting-box">
+        <h2>Welcome Back, Professor!</h2>
+        <p>Here's what's happening with your courses today.</p>
+      </div>
+      <div class="teacher-stats">
+        <div class="stat-card">
+          <span class="stat-value">1,284</span>
+          <span class="stat-label">Total Students</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">8</span>
+          <span class="stat-label">Published Courses</span>
+        </div>
+        <div class="stat-card urgent">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Unread Doubts</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- My Courses Section -->
+    <section class="my-courses">
+      <h3>My Courses</h3>
+      <div class="course-management-list">
+        <div class="course-manage-card">
+          <div class="course-details">
+            <h4>Advanced CSS & Animations</h4>
+            <p>182 Students Enrolled</p>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-secondary">Edit Course</button>
+            <button class="btn btn-primary">View Analytics</button>
+          </div>
+        </div>
+        <div class="course-manage-card">
+          <div class="course-details">
+            <h4>Figma for UI/UX Design</h4>
+            <p>350 Students Enrolled</p>
+          </div>
+          <div class="course-actions">
+            <button class="btn btn-secondary">Edit Course</button>
+            <button class="btn btn-primary">View Analytics</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Student Doubts -->
+    <section class="recent-doubts">
+      <h3>Recent Student Doubts</h3>
+      <div class="doubts-list">
+        <div class="doubt-item">
+          <div class="doubt-info">
+            <span class="student-name">Alex Morgan</span> in <span class="course-name">Advanced CSS</span>
+          </div>
+          <p class="doubt-text">"Having trouble with the flexbox alignment on the final project. Can you clarify the container properties?"</p>
+        </div>
+        <div class="doubt-item">
+          <div class="doubt-info">
+            <span class="student-name">Jane Doe</span> in <span class="course-name">Figma for UI/UX</span>
+          </div>
+          <p class="doubt-text">"My component variants are not behaving as expected. I've attached a screenshot."</p>
+          <span class="attachment-tag">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+            Image Attached
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

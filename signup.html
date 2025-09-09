@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Connect - Sign Up</title>
+  <link rel="stylesheet" href="signup_style.css">
+</head>
+<body>
+
+  <!-- 3D Grid Background -->
+  <div class="background-grid"></div>
+  <div class="background-glow"></div>
+
+  <div class="signup-container">
+    <div class="signup-box">
+      <h2>Join SkillBridge Connect</h2>
+      <p>Start your journey with us today.</p>
+      
+      <form id="signup-form" action="#">
+        <!-- Role Selection -->
+        <div class="role-selection">
+          <label class="role-card" for="role-student">
+            <input type="radio" id="role-student" name="role" value="student" checked>
+            <div class="role-content">
+              <span class="role-icon">&#127891;</span>
+              <span class="role-name">I am a Student</span>
+            </div>
+          </label>
+          <label class="role-card" for="role-teacher">
+            <input type="radio" id="role-teacher" name="role" value="teacher">
+            <div class="role-content">
+              <span class="role-icon">&#128188;</span>
+              <span class="role-name">I am a Teacher</span>
+            </div>
+          </label>
+        </div>
+        
+        <div class="input-group">
+          <label for="fullname">Username</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <!-- ** THIS IS THE CORRECTED PART ** -->
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create Account</button>
+        <p id="successMsg" class="success-message"></p>
+        <p id="errorMsg" class="error-message"></p>
+      </form>
+
+      <p class="login-link">
+        Already have an account? <a href="/login.html">Sign In</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/signup.js"></script>
+</body>
+</html>

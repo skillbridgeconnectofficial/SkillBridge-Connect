@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Connect - Course Management</title>
+  <link rel="stylesheet" href="teacher_qna.css">
+</head>
+<body>
+
+  <!-- 3D Grid Background -->
+  <div class="background-grid"></div>
+  
+  <!-- Sidebar Placeholder -->
+  <aside class="sidebar">
+    <ul class="sidebar-nav">
+      <a href="index.html"> <li data-tooltip="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </li></a>
+      <a href="teacher_courses.html"><li data-tooltip="My Courses">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+      </li></a>
+      <a href="teacher_qna.html"><li data-tooltip="Student Q&A" class="notification">
+        <span class="notification-badge">3</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      </li></a>
+      <a href="analytics.html"><li data-tooltip="Analytics">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+      </li></a>
+    </ul>
+  </aside>
+
+  <!-- Main Content: Course Grid -->
+  <main class="main-content">
+    <header class="page-header">
+      <h1>Course Management</h1>
+      <p>Your central hub for creating, managing, and tracking your courses.</p>
+    </header>
+    <div class="course-grid">
+      <!-- Course Card 1 - With Questions -->
+      <div class="course-card">
+        <h4>Advanced JavaScript</h4>
+        <div class="course-stats">215 Students</div>
+        <button class="btn btn-primary open-modal-btn">View Questions (2 New)</button>
+      </div>
+      <!-- Course Card 2 - No New Questions -->
+      <div class="course-card">
+        <h4>UI/UX with Figma</h4>
+        <div class="course-stats">350 Students</div>
+        <button class="btn btn-secondary open-modal-btn">View Questions</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Structure (Initially Hidden) -->
+  <div class="modal-overlay" id="qa-modal">
+    <div class="modal-content">
+      <button class="close-modal-btn" id="close-modal">&times;</button>
+      
+      <!-- Copied Q&A Interface -->
+      <div class="qa-container">
+        <div class="inbox-panel">
+          <header class="inbox-header"><h2>Q&A: Advanced JS</h2></header>
+          <div class="inbox-list">
+            <div class="inbox-item active unread">
+              <p><strong>Alex Morgan</strong><span>&nbsp;&bull; 15m ago</span></p>
+              <p class="question-snippet">Flexbox alignment issues...</p>
+            </div>
+            <div class="inbox-item unread">
+              <p><strong>Ben Carter</strong><span>&nbsp;&bull; 5h ago</span></p>
+              <p class="question-snippet">Can we use external libraries?</p>
+            </div>
+          </div>
+        </div>
+        <div class="conversation-panel">
+          <div class="messages-area">
+            <div class="message student-message">
+              <p>Hey Professor, I'm having trouble with the flexbox alignment on the final project...</p>
+            </div>
+          </div>
+          <div class="reply-editor">
+            <textarea class="editor-input" placeholder="Type your reply..."></textarea>
+            <div class="editor-actions">
+              <button class="btn btn-secondary">Mark as Resolved</button>
+              <button class="btn btn-primary">Send Reply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Q&A Interface -->
+      
+    </div>
+  </div>
+
+  <script src="teacher_qna.js"></script>
+
+</body>
+</html>

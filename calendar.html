@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Connect - My Streak</title>
+  <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+
+  <!-- 3D Grid Background -->
+  <div class="background-grid"></div>
+  
+  <!-- Sidebar Placeholder -->
+  <aside class="sidebar">
+      <ul class="sidebar-nav">
+      <a href="index.html"> <li data-tooltip="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </li></a>
+      <a href="student_courses.html"><li data-tooltip="Courses">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+      </li></a>
+      <a href="calendar.html"><li data-tooltip="Streak">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+      </li></a>
+      <a href="shop.html"> <li data-tooltip="Shop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+      </li></a>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <header class="page-header">
+      <h1>Your Learning Streak</h1>
+      <p>"Success is the sum of small efforts, repeated day in and day out."</p>
+    </header>
+
+    <!-- Streak Stats -->
+    <section class="streak-stats">
+      <div class="stat-card current-streak">
+        <span class="stat-value">12</span>
+        <span class="stat-label">Current Streak (Days)</span>
+        <div class="flame-icon">&#128293;</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">28</span>
+        <span class="stat-label">Longest Streak</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">152</span>
+        <span class="stat-label">Total Days Learned</span>
+      </div>
+    </section>
+
+    <!-- Calendar -->
+    <section class="calendar-container">
+      <div class="calendar-header">
+        <button class="nav-btn">&lt;</button>
+        <h2>September 2025</h2>
+        <button class="nav-btn">&gt;</button>
+      </div>
+      <div class="calendar-grid">
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+        
+        <!-- Days of the month (example) -->
+        <div class="day other-month">31</div>
+        <div class="day streak">1</div>
+        <div class="day streak">2</div>
+        <div class="day streak">3</div>
+        <div class="day streak">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day streak">8</div>
+        <div class="day streak today">9</div> <!-- Current Day -->
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+        <div class="day other-month">1</div>
+      </div>
+    </section>
+
+  </main>
+  <script src="about_me.js"></script>
+
+</body>
+</html>

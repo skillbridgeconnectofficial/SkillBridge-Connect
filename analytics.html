@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Connect - Analytics</title>
+  <link rel="stylesheet" href="analytics_style.css">
+</head>
+<body>
+
+  <!-- 3D Grid Background -->
+  <div class="background-grid"></div>
+  
+  <!-- Sidebar Placeholder -->
+  <aside class="sidebar">
+    <ul class="sidebar-nav">
+      <a href="index.html"> <li data-tooltip="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </li></a>
+      <a href="teacher_courses.html"><li data-tooltip="My Courses">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+      </li></a>
+      <a href="teacher_qna.html"><li data-tooltip="Student Q&A" class="notification">
+        <span class="notification-badge">3</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      </li></a>
+      <a href="analytics.html"><li data-tooltip="Analytics">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+      </li></a>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="page-header">
+      <h1>Performance Analytics</h1>
+      <p>Track your success and gain insights into your courses and students.</p>
+    </header>
+
+    <!-- KPI Cards -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="card-header">
+          <h4>Total Revenue</h4>
+          <span class="kpi-icon revenue-icon">&dollar;</span>
+        </div>
+        <div class="kpi-value">$12,845.50</div>
+        <div class="kpi-trend positive">+8.2% vs. last month</div>
+      </div>
+      <div class="kpi-card">
+        <div class="card-header">
+          <h4>Total Enrollments</h4>
+          <span class="kpi-icon enroll-icon">&#128101;</span>
+        </div>
+        <div class="kpi-value">1,284</div>
+        <div class="kpi-trend positive">+50 this month</div>
+      </div>
+      <div class="kpi-card">
+        <div class="card-header">
+          <h4>Avg. Completion</h4>
+          <span class="kpi-icon complete-icon">&#127941;</span>
+        </div>
+        <div class="kpi-value">72%</div>
+        <div class="kpi-trend negative">-1.5% vs. last month</div>
+      </div>
+      <div class="kpi-card">
+        <div class="card-header">
+          <h4>Average Rating</h4>
+          <span class="kpi-icon rating-icon">&#11088;</span>
+        </div>
+        <div class="kpi-value">4.8 / 5.0</div>
+        <div class="kpi-trend neutral">Stable</div>
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-grid">
+      <div class="chart-container">
+        <div class="chart-header">
+          <h4>Revenue Over Time</h4>
+          <div class="chart-filters">
+            <button class="filter-btn active">Monthly</button>
+            <button class="filter-btn">Yearly</button>
+          </div>
+        </div>
+        <!-- Placeholder for a line chart -->
+        <div class="chart-placeholder" id="revenue-chart">
+          <!-- A library like Chart.js would render a chart here -->
+        </div>
+      </div>
+      <div class="chart-container">
+        <div class="chart-header"><h4>Student Engagement</h4></div>
+        <!-- Placeholder for a donut chart -->
+        <div class="chart-placeholder" id="engagement-chart">
+          <!-- A library like Chart.js would render a chart here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Table Section -->
+    <section class="table-container">
+      <div class="chart-header"><h4>Course Performance Breakdown</h4></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Enrollments</th>
+            <th>Completion Rate</th>
+            <th>Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>UI/UX with Figma</td>
+            <td>350</td>
+            <td>85%</td>
+            <td>$5,599.65</td>
+          </tr>
+          <tr>
+            <td>Advanced JavaScript</td>
+            <td>215</td>
+            <td>68%</td>
+            <td>$3,224.85</td>
+          </tr>
+          <tr>
+            <td>Introduction to Python</td>
+            <td>480</td>
+            <td>92%</td>
+            <td>$2,879.52</td>
+          </tr>
+          <tr>
+            <td>Data Science Masterclass</td>
+            <td>239</td>
+            <td>55%</td>
+            <td>$1,141.48</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+  
+  <!-- For real charts, you'd include a library like Chart.js -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <script src="analytics.js"></script>
+
+</body>
+</html>
