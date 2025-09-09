@@ -15,7 +15,7 @@ const form = document.getElementById('signup-form');
       }
 
       try {
-        const res = await fetch("https://skillbridge-connect.onrender.com", {
+        const res = await fetch("https://skillbridge-connect.onrender.com/signup.html", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ username, password })
@@ -36,3 +36,4 @@ const form = document.getElementById('signup-form');
       }
 
     });
+
